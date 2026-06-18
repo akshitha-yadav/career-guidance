@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Educational Guidance Platform Design System */
+
+@layer base {
+  :root {
+    /* Educational Color Palette */
+    --background: 240 10% 98%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Primary - Deep Educational Blue */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 221 83% 65%;
+    --primary-dark: 221 83% 40%;
+
+    /* Secondary - Knowledge Purple */
+    --secondary: 250 75% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 250 75% 75%;
+
+    /* Success - Growth Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 50%;
+
+    /* Warning - Attention Orange */
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 100%;
+
+    --muted: 220 13% 95%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 250 75% 95%;
+    --accent-foreground: 250 75% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
+
+    /* Educational Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(250 75% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 13% 98%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 50%) 100%);
+    --gradient-feature: linear-gradient(120deg, hsl(250 75% 95%) 0%, hsl(221 83% 95%) 100%);
+
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(220 13% 85% / 0.1), 0 2px 4px -1px hsl(220 13% 85% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 85% / 0.1), 0 4px 6px -2px hsl(220 13% 85% / 0.05);
+    --shadow-glow: 0 0 0 1px hsl(221 83% 53% / 0.05), 0 1px 3px hsl(221 83% 53% / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Educational Card Styles */
+  .edu-card {
+    @apply bg-card rounded-xl border border-border shadow-[var(--shadow-card)] transition-[var(--transition-smooth)];
+  }
+
+  .edu-card:hover {
+    @apply shadow-[var(--shadow-lg)] -translate-y-1;
+  }
+
+  /* Hero Button Variants */
+  .btn-hero {
+    @apply bg-[var(--gradient-hero)] text-white font-semibold py-4 px-8 rounded-xl border-0 shadow-[var(--shadow-glow)] transition-[var(--transition-bounce)] hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-secondary-outline {
+    @apply bg-transparent border-2 border-primary text-primary font-semibold py-4 px-8 rounded-xl transition-[var(--transition-smooth)] hover:bg-primary hover:text-primary-foreground;
+  }
+
+  /* Feature Section Background */
+  .feature-bg {
+    @apply bg-[var(--gradient-feature)];
+  }
+
+  /* Success Button */
+  .btn-success {
+    @apply bg-[var(--gradient-success)] text-success-foreground font-semibold py-3 px-6 rounded-lg transition-[var(--transition-smooth)] hover:scale-105;
+  }
+
+  /* Quiz Progress Bar */
+  .progress-educational {
+    @apply bg-[var(--gradient-hero)] h-2 rounded-full transition-all duration-500 ease-out;
+  }
+}
+
+@layer utilities {
+  /* Text Gradients */
+  .text-gradient-hero {
+    @apply bg-[var(--gradient-hero)] bg-clip-text text-transparent;
+  }
+
+  .text-gradient-success {
+    @apply bg-[var(--gradient-success)] bg-clip-text text-transparent;
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
