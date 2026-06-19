@@ -1,41 +1,94 @@
-An interactive web-based platform that helps students discover suitable career paths based on their interests, strengths, and preferences through an intelligent quiz system.
+# 🎯 AI Career Guidance Platform
 
-Tech Stack
+An AI-powered web application that helps students explore suitable career paths based on their interests, strengths, and preferences. The platform uses an interactive quiz system to analyze user responses and provide personalized career recommendations.
 
-React
+## 🚀 Features
 
-TypeScript
+- Interactive Career Assessment Quiz
+- Personalized Career Recommendations
+- Skill-Based Career Matching
+- Real-Time Result Generation
+- Responsive and User-Friendly Interface
+- Modern UI Design
+- Type-Safe Development with TypeScript
+- Modular and Scalable Architecture
 
-CSS
+## 🛠️ Tech Stack
 
-Responsive UI Design
+- React.js
+- TypeScript
+- CSS3
+- HTML5
+- Vite
+- Responsive Web Design
 
-Project Overview
+## 📂 Project Structure
 
-This platform provides students with a structured career discovery experience. Users take an interest-based quiz, and based on their responses, the system analyzes patterns and recommends career paths aligned with their profile.
+```
+career-guidance/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── data/
+│   ├── assets/
+│   └── styles/
+│
+├── public/
+├── package.json
+├── tsconfig.json
+└── README.md
+```
 
-The application is fully responsive and designed with a clean and intuitive user interface to ensure smooth navigation across devices.
+## 🎯 Project Objective
 
-Key Features
+The primary goal of this platform is to assist students in making informed career decisions by:
 
-Interactive career interest quiz
+- Identifying interests and strengths
+- Recommending suitable career domains
+- Providing guidance for skill development
+- Helping users explore future opportunities
 
-Dynamic question rendering
+## ⚙️ Installation
 
-Real-time recommendation generation
+### Clone the Repository
 
-Clean and responsive UI
+```bash
+git clone https://github.com/akshitha-yadav/career-guidance.git
+cd career-guidance
+```
 
-Modular component architecture
+### Install Dependencies
 
-Type-safe implementation using TypeScript
+```bash
+npm install
+```
 
-How It Works
+### Run the Development Server
 
-User selects answers in the quiz.
+```bash
+npm run dev
+```
 
-Each answer contributes to specific career domains.
+### Build for Production
 
-The system evaluates the highest matching domain.
+```bash
+npm run build
+```
 
-Recommended career paths are displayed instantly.
+## 💡 How It Works
+
+1. Users answer a series of career-related questions.
+2. The system analyzes their responses.
+3. Career domains are matched based on interests and strengths.
+4. Personalized recommendations are displayed instantly.
+
+## 🌟 Future Enhancements
+
+- AI-based Resume Analysis
+- Skill Gap Identification
+- Job Recommendation Engine
+- Learning Roadmap Generation
+- Industry Trend Analysis
+- Chatbot Career Assistant
+
