@@ -1,4 +1,4 @@
-# 🎯 AI Career Guidance Platform
+# 🎯  Career Guidance Platform
 
 An AI-powered web application that helps students explore suitable career paths based on their interests, strengths, and preferences. The platform uses an interactive quiz system to analyze user responses and provide personalized career recommendations.
 
